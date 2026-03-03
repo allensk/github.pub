@@ -1,11 +1,55 @@
-<h2>About Me</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me & My Products</title>
+    <style>
+        /* 优化样式，适配不同屏幕尺寸，增加基础美化 */
+        .product {
+            display: inline-block;
+            min-width: 200px; /* 减小最小宽度，适配移动端 */
+            width: 280px;     /* 增加固定宽度，排版更整齐 */
+            font-weight: 600; /* 突出产品名称 */
+            margin-right: 10px; /* 与链接保持间距 */
+        }
 
-<p>I am an individual developer, building apps for daily life.</p>
+        /* 给列表增加基础样式，提升可读性 */
+        .product-list {
+            list-style: none;
+            padding-left: 0;
+        }
 
-<p>I love traditional culture, games, and strategic thinking.</p>
+        .product-list li {
+            margin: 10px 0; /* 列表项之间增加间距 */
+        }
 
-<h2>Products</h2>
+        /* 链接样式优化 */
+        a {
+            color: #2196F3;
+            text-decoration: none;
+        }
 
-<ul>
-	<li>Thirty-Six Stratagems EBook</li>
-</ul>
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>About Me</h2>
+    <p>I am an individual developer, building apps for daily life.</p>
+    <p>I love traditional culture, games, and strategic thinking.</p>
+
+    <h2>Products</h2>
+    <ul class="product-list">
+        <!-- 修复未闭合的span标签，补充完整的链接 -->
+        <li><span class="product">Thirty-Six Stratagems EBook</span> 
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=xyz.alsk.thirtysixstratagemsbook">Google Play</a>
+        </li> 
+        <li><span class="product">Thousand Character Classic EBook</span>
+            <!-- 补充占位链接，你可以替换为实际地址 -->
+            <a href="#">No Link</a>
+        </li>
+    </ul>
+</body>
+</html>
