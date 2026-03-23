@@ -1,5 +1,9 @@
 Privacy Guarantee
 
+This Privacy Policy applies to the following applications published by **石泽群 / Alsk** on **Google Play**
+- **Thirty-Six Stratagems**
+- **Thousand Character Classic**
+
 Effective Date: February 21, 2026
 
 Your privacy is absolute. This ebook is provided for your information and enjoyment with the following guarantees:
@@ -13,3 +17,5 @@ Your privacy is absolute. This ebook is provided for your information and enjoym
     Complete Privacy: You are free to read, share, and use this ebook without ever identifying yourself to us.
 
 In short: Enjoy the book. We don't want your data; we just want you to have the information.
+
+
