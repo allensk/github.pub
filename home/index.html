@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://doc.alskp.xyz/self/" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta name="generator" content="DocTool" />
+  <meta name="description" content="Alsk Home" />
+  <title>Hello, 欢迎访问我的主页 - Alsk Home</title>
+  <script>document.documentElement.className += ' has-js';</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+  <header class="site-header">
+    <label class="nav-toggle-label" for="nav-toggle" title="Toggle navigation">&#9776;</label>
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="" /><span class="brand-name">Alsk Home</span></a>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav class="site-nav" aria-label="Site navigation">
+<ul class="nav-list nav-level-0">
+<li class="nav-item is-active"><a href="index.html" aria-current="page">主页</a></li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">产品</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-0" data-nav="产品"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse 产品</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-0">
+<li class="nav-item"><a href="RectIcon.html">RectIcon</a></li>
+<li class="nav-item"><a href="JobBicycle.html">JobBicycle</a></li>
+</ul>
+</li>
+<li class="nav-item"><a href="About.html">关于</a></li>
+</ul>
+      </nav>
+    </aside>
+    <script>
+"use strict";(function(){const s="doctool.nav.folded",r=Array.from(document.querySelectorAll(".nav-fold-toggle")),a=()=>{try{const t=JSON.parse(window.localStorage.getItem(s)||"[]");return Array.isArray(t)?t.filter(e=>typeof e=="string"):[]}catch{return[]}},c=t=>{try{window.localStorage.setItem(s,JSON.stringify(Array.from(t)))}catch{}},n=(t,e)=>{const o=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-expanded",e?"false":"true"),t.closest(".nav-section").classList.toggle("is-folded",e),o&&(o.hidden=e)};try{if(r.length>0){const t=new Set(a());window.__docToolNavFold={store:s,toggles:r,folded:t,apply:n,write:c};for(const e of r){const o=e.closest(".nav-section").classList.contains("is-active-section");n(e,t.has(e.dataset.nav)&&!o)}}}finally{document.documentElement.classList.add("is-nav-ready")}})();
+    </script>
+    <main class="content" id="content">
+      <article class="markdown-body">
+<h1 id="hello-欢迎访问我的主页">Hello, 欢迎访问我的主页</h1>
+<p>普通 35+ 程序员一枚, 只懂 C/C++, JS/TS, PHP, Bash/Bat</p>
+<p>我在软件综合素养上应该要略高一点</p>
+<ul>
+<li>软件设计 (精巧易用)</li>
+<li>软件架构 (简单稳定)</li>
+<li>Native + Web</li>
+<li>Windows + Linux</li>
+</ul>
+<p>个人比较适合做应用, 普通用户有需要的话可以私信我 💐💐💐 合作互利</p>
+<p><date>Oct 19, 2026</date></p>
+
+      </article>
+      <nav class="page-nav" aria-label="Page navigation">
+<span class="page-nav-spacer"></span>
+<a class="page-nav-link page-nav-next" href="RectIcon.html"><span class="page-nav-label">Next &rarr;</span><span class="page-nav-title">RectIcon</span></a>
+      </nav>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p class="site-footer-copyright">Copyright &copy; 2026 Alsk</p>
+    <p class="site-footer-note">Built from DocTool</p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
