@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="http://doc.alskp.xyz/doc/recticon/en/0408WhatsIco.html" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta name="generator" content="DocTool" />
+  <meta name="description" content="RectIcon Doc / 文档" />
+  <title>What is an ICO icon? - RectIcon Doc / 文档</title>
+  <script>document.documentElement.className += ' has-js';</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+  <header class="site-header">
+    <label class="nav-toggle-label" for="nav-toggle" title="Toggle navigation">&#9776;</label>
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="" /><span class="brand-name">RectIcon Doc / 文档</span></a>
+    <nav class="site-langs" aria-label="Language"><a class="lang-link" lang="zh-CN" hreflang="zh-CN" href="../0408WhatsIco.html">中文</a><span class="lang-link is-current" lang="en" aria-current="true">English</span></nav>
+  </header>
+  <div class="layout has-outline">
+    <aside class="sidebar">
+      <nav class="site-nav" aria-label="Site navigation">
+<ul class="nav-list nav-level-0">
+<li class="nav-item"><a href="index.html">Home</a></li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">Introduction</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-0" data-nav="Introduction"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Introduction</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-0">
+<li class="nav-item"><a href="0010Introduction.html">Introduction</a></li>
+<li class="nav-item"><a href="0011Operations.html">Operations</a></li>
+<li class="nav-item"><a href="0012UseCase.html">Use cases</a></li>
+</ul>
+</li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">About</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-1" data-nav="About"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse About</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-1">
+<li class="nav-item"><a href="0060About.html">About</a></li>
+<li class="nav-item"><a href="0061License.html">License</a></li>
+<li class="nav-item"><a href="0062ChangeLog.html">Change log</a></li>
+<li class="nav-item"><a href="0063Support.html">Support</a></li>
+</ul>
+</li>
+<li class="nav-section is-active-section">
+<div class="nav-section-head"><span class="nav-section-title">Knowledge (AI)</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-2" data-nav="Knowledge (AI)"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Knowledge (AI)</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-2">
+<li class="nav-item"><a href="0403CommonRatio.html">Common image ratios and their uses</a></li>
+<li class="nav-item"><a href="0404CommonResolution.html">Social media image size quick reference</a></li>
+<li class="nav-item"><a href="0405PicBasicKnow.html">Image basics: compression, raster and distortion</a></li>
+<li class="nav-item"><a href="0406PicFormat.html">How to choose an image format?</a></li>
+<li class="nav-item"><a href="0407WhatsDPI.html">What is DPI?</a></li>
+<li class="nav-item is-active"><a href="0408WhatsIco.html" aria-current="page">What is an ICO icon?</a></li>
+</ul>
+</li>
+</ul>
+      </nav>
+    </aside>
+    <script>
+"use strict";(function(){const s="doctool.nav.folded",r=Array.from(document.querySelectorAll(".nav-fold-toggle")),a=()=>{try{const t=JSON.parse(window.localStorage.getItem(s)||"[]");return Array.isArray(t)?t.filter(e=>typeof e=="string"):[]}catch{return[]}},c=t=>{try{window.localStorage.setItem(s,JSON.stringify(Array.from(t)))}catch{}},n=(t,e)=>{const o=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-expanded",e?"false":"true"),t.closest(".nav-section").classList.toggle("is-folded",e),o&&(o.hidden=e)};try{if(r.length>0){const t=new Set(a());window.__docToolNavFold={store:s,toggles:r,folded:t,apply:n,write:c};for(const e of r){const o=e.closest(".nav-section").classList.contains("is-active-section");n(e,t.has(e.dataset.nav)&&!o)}}}finally{document.documentElement.classList.add("is-nav-ready")}})();
+    </script>
+    <main class="content" id="content">
+      <article class="markdown-body">
+<h1 id="what-is-an-ico-icon">What is an ICO icon?</h1>
+<p><code>.ico</code> is the common Windows icon file format, used to show the icons of software, folders, shortcuts and programs.</p>
+<p>The biggest difference from ordinary pictures: one ICO file can hold <strong>many sizes</strong> of the image at once, and Windows picks the right one for each display situation.</p>
+<h2 id="at-a-glance">At a glance</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How many images in one ICO</td>
+<td>Several, one per size</td>
+</tr>
+<tr>
+<td>Recommended sizes</td>
+<td>16, 24, 32, 48, 256 px</td>
+</tr>
+<tr>
+<td>Recommended color format</td>
+<td>32-bit RGBA (with Alpha transparency)</td>
+</tr>
+<tr>
+<td>How is 256 × 256 stored</td>
+<td>Usually PNG encoded inside the ICO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一where-ico-is-used">一、Where ICO is used</h2>
+<ul>
+<li><strong>Software icons</strong>: EXE programs, desktop, start menu</li>
+<li><strong>Folder icons</strong>: custom folder looks</li>
+<li><strong>Shortcut icons</strong>: desktop and other shortcuts</li>
+<li><strong>Taskbar icons</strong>: taskbar and system tray</li>
+<li><strong>File type icons</strong>: representing a kind of file</li>
+</ul>
+<p>Simply put, ICO is the dedicated picture format Windows uses to show all kinds of icons.</p>
+<h2 id="二which-sizes-can-an-ico-contain">二、Which sizes can an ICO contain</h2>
+<h3 id="the-minimal-recommended-set-5-sizes">The minimal recommended set (5 sizes)</h3>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Common use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16 × 16</td>
+<td>Small icons, system tray</td>
+</tr>
+<tr>
+<td>24 × 24</td>
+<td>Small icons in high DPI environments</td>
+</tr>
+<tr>
+<td>32 × 32</td>
+<td>Normal window icons, taskbar</td>
+</tr>
+<tr>
+<td>48 × 48</td>
+<td>Desktop and larger icon display</td>
+</tr>
+<tr>
+<td>256 × 256</td>
+<td>High resolution display, large icons</td>
+</tr>
+</tbody>
+</table>
+<p>All sizes are in pixels (px). These five sizes are the minimal recommended set for Windows application icons and cover most common display situations.</p>
+<h3 id="optional-sizes">Optional sizes</h3>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Good for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64 × 64</td>
+<td>Larger icon display</td>
+</tr>
+<tr>
+<td>128 × 128</td>
+<td>High resolution icon display</td>
+</tr>
+</tbody>
+</table>
+<p>These sizes are not required, add them by software and real world needs.</p>
+<p><strong>Note:</strong> the 256 × 256 image is usually stored PNG encoded inside the ICO file.</p>
+<h2 id="三why-one-ico-holds-several-pictures">三、Why one ICO holds several pictures</h2>
+<p>This is the most important trait of the ICO format.</p>
+<p>For example one ICO holds 16 × 16, 24 × 24, 32 × 32, 48 × 48 and 256 × 256: they all belong to the same icon, but each one can be designed and optimized for its size.</p>
+<p>Windows picks the best fitting image for the actual display, instead of endlessly enlarging one small picture — that is what keeps icons sharp and free of jagged edges.</p>
+<h2 id="四colors-and-transparency">四、Colors and transparency</h2>
+<p>ICO supports ordinary pictures as well as transparent backgrounds, the common specs:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Item</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color depth</td>
+<td>1-bit, 4-bit, 8-bit, 24-bit, 32-bit</td>
+</tr>
+<tr>
+<td>Transparent background</td>
+<td>Alpha channel, blends naturally with the desktop</td>
+</tr>
+<tr>
+<td>PNG images</td>
+<td>A PNG image can be put straight into the ICO file</td>
+</tr>
+</tbody>
+</table>
+<p>For modern Windows software, <strong>32-bit color + Alpha transparency (RGBA)</strong> gives the best color and transparency results.</p>
+<h2 id="五things-to-watch-when-making-an-ico">五、Things to watch when making an ICO</h2>
+<ol type="1">
+<li><strong>Use a square picture</strong>: width and height should match.</li>
+<li><strong>Prefer a transparent background</strong>: avoids ugly white blocks around the icon.</li>
+<li><strong>Include the common sizes</strong>: at least the five of the minimal recommended set.</li>
+<li><strong>High quality for 256 × 256</strong>: the big icon must survive high resolution displays.</li>
+<li><strong>Optimize the small sizes separately</strong>: 16 × 16 and 24 × 24 have little space, complex designs blur into a smear.</li>
+</ol>
+<h2 id="六recommended-ico-file-specs">六、Recommended ICO file specs</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File format</td>
+<td>ICO</td>
+</tr>
+<tr>
+<td>Minimal recommended size set</td>
+<td>16, 24, 32, 48, 256 px</td>
+</tr>
+<tr>
+<td>Color depth</td>
+<td>32-bit RGBA</td>
+</tr>
+<tr>
+<td>Background</td>
+<td>Transparency supported</td>
+</tr>
+<tr>
+<td>256 × 256 image</td>
+<td>PNG encoding supported</td>
+</tr>
+<tr>
+<td>File content</td>
+<td>One file holding several sizes</td>
+</tr>
+</tbody>
+</table>
+<p>For higher resolutions or special needs, sizes like 64 × 64 and 128 × 128 can be added.</p>
+<h2 id="七how-this-relates-to-recticon">七、How this relates to RectIcon</h2>
+<p>RectIcon’s <strong>multi export</strong> (Tools menu) exports several PNG sizes in one go and generates a 32 × 32 <code>favicon.ico</code>, which covers the common icon making needs.</p>
+<h2 id="八summary">八、Summary</h2>
+<p>An ICO is not just one picture, it is an icon file that can hold images in several sizes.</p>
+<p>When making a Windows software icon there is no need to pile up sizes: prepare the recommended minimal set of <strong>16 × 16, 24 × 24, 32 × 32, 48 × 48 and 256 × 256</strong> and most scenarios are covered.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows/apps/design/iconography/app-icon-construction">Microsoft Learn - App icon construction</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-icons">Microsoft Learn - Icons (Windows design fundamentals)</a></li>
+</ul>
+<p>Related: <a href="0407WhatsDPI.html">What is DPI</a> · <a href="0406PicFormat.html">How to choose an image format</a></p>
+
+      </article>
+      <nav class="page-nav" aria-label="Page navigation">
+<a class="page-nav-link page-nav-prev" href="0407WhatsDPI.html"><span class="page-nav-label">&larr; Previous</span><span class="page-nav-title">What is DPI?</span></a>
+<span class="page-nav-spacer"></span>
+      </nav>
+    </main>
+    <aside class="outline" aria-label="On this page">
+      <nav class="page-outline">
+        <p class="outline-title">On this page</p>
+        <ul class="outline-list outline-level-0">
+          <li class="outline-item"><a href="#at-a-glance">At a glance</a></li>
+          <li class="outline-item"><a href="#一where-ico-is-used">一、Where ICO is used</a></li>
+          <li class="outline-item"><a href="#二which-sizes-can-an-ico-contain">二、Which sizes can an ICO contain</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#the-minimal-recommended-set-5-sizes">The minimal recommended set (5 sizes)</a></li>
+            <li class="outline-item"><a href="#optional-sizes">Optional sizes</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#三why-one-ico-holds-several-pictures">三、Why one ICO holds several pictures</a></li>
+          <li class="outline-item"><a href="#四colors-and-transparency">四、Colors and transparency</a></li>
+          <li class="outline-item"><a href="#五things-to-watch-when-making-an-ico">五、Things to watch when making an ICO</a></li>
+          <li class="outline-item"><a href="#六recommended-ico-file-specs">六、Recommended ICO file specs</a></li>
+          <li class="outline-item"><a href="#七how-this-relates-to-recticon">七、How this relates to RectIcon</a></li>
+          <li class="outline-item"><a href="#八summary">八、Summary</a></li>
+          <li class="outline-item"><a href="#references">References</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p class="site-footer-copyright">Copyright &copy; 2026 Alsk</p>
+    <p class="site-footer-note">Built from DocTool</p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

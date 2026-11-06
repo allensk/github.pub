@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="http://doc.alskp.xyz/doc/recticon/0407WhatsDPI.html" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta name="generator" content="DocTool" />
+  <meta name="description" content="RectIcon Doc / 文档" />
+  <title>什么是 DPI？ - RectIcon Doc / 文档</title>
+  <script>document.documentElement.className += ' has-js';</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+  <header class="site-header">
+    <label class="nav-toggle-label" for="nav-toggle" title="Toggle navigation">&#9776;</label>
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="" /><span class="brand-name">RectIcon Doc / 文档</span></a>
+    <nav class="site-langs" aria-label="Language"><span class="lang-link is-current" lang="zh-CN" aria-current="true">中文</span><a class="lang-link" lang="en" hreflang="en" href="en/0407WhatsDPI.html">English</a></nav>
+  </header>
+  <div class="layout has-outline">
+    <aside class="sidebar">
+      <nav class="site-nav" aria-label="Site navigation">
+<ul class="nav-list nav-level-0">
+<li class="nav-item"><a href="index.html">主页</a></li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">介绍</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-0" data-nav="介绍"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse 介绍</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-0">
+<li class="nav-item"><a href="0010Introduction.html">简介</a></li>
+<li class="nav-item"><a href="0011Operations.html">操作</a></li>
+<li class="nav-item"><a href="0012UseCase.html">用例</a></li>
+</ul>
+</li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">关于</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-1" data-nav="关于"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse 关于</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-1">
+<li class="nav-item"><a href="0060About.html">关于</a></li>
+<li class="nav-item"><a href="0061License.html">条款</a></li>
+<li class="nav-item"><a href="0062ChangeLog.html">版本变更</a></li>
+<li class="nav-item"><a href="0063Support.html">支持</a></li>
+</ul>
+</li>
+<li class="nav-section is-active-section">
+<div class="nav-section-head"><span class="nav-section-title">知识 (AI)</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-2" data-nav="知识 (AI)"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse 知识 (AI)</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-2">
+<li class="nav-item"><a href="0403CommonRatio.html">常见图片比例与用途</a></li>
+<li class="nav-item"><a href="0404CommonResolution.html">主流网站图片尺寸速查</a></li>
+<li class="nav-item"><a href="0405PicBasicKnow.html">图片基础知识：压缩、位图与失真</a></li>
+<li class="nav-item"><a href="0406PicFormat.html">图片格式怎么选？</a></li>
+<li class="nav-item is-active"><a href="0407WhatsDPI.html" aria-current="page">什么是 DPI？</a></li>
+<li class="nav-item"><a href="0408WhatsIco.html">什么是 ICO 图标？</a></li>
+</ul>
+</li>
+</ul>
+      </nav>
+    </aside>
+    <script>
+"use strict";(function(){const s="doctool.nav.folded",r=Array.from(document.querySelectorAll(".nav-fold-toggle")),a=()=>{try{const t=JSON.parse(window.localStorage.getItem(s)||"[]");return Array.isArray(t)?t.filter(e=>typeof e=="string"):[]}catch{return[]}},c=t=>{try{window.localStorage.setItem(s,JSON.stringify(Array.from(t)))}catch{}},n=(t,e)=>{const o=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-expanded",e?"false":"true"),t.closest(".nav-section").classList.toggle("is-folded",e),o&&(o.hidden=e)};try{if(r.length>0){const t=new Set(a());window.__docToolNavFold={store:s,toggles:r,folded:t,apply:n,write:c};for(const e of r){const o=e.closest(".nav-section").classList.contains("is-active-section");n(e,t.has(e.dataset.nav)&&!o)}}}finally{document.documentElement.classList.add("is-nav-ready")}})();
+    </script>
+    <main class="content" id="content">
+      <article class="markdown-body">
+<h1 id="什么是-dpi">什么是 DPI？</h1>
+<p>DPI 是 <strong>Dots Per Inch</strong>（每英寸点数）的缩写，用于描述显示或打印时的点密度。</p>
+<p>在 Windows 桌面程序中，DPI 更常被当作 <strong>界面缩放比例</strong> 的代名词：系统用 DPI 决定窗口、按钮、文字、图标和图片显示多大。</p>
+<figure>
+<img src="./images/0401_01.PNG" alt="Windows DPI 缩放示意" />
+<figcaption aria-hidden="true">Windows DPI 缩放示意</figcaption>
+</figure>
+<h2 id="速览">速览</h2>
+<table>
+<thead>
+<tr>
+<th>疑问</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>96 DPI 是什么</td>
+<td>Windows 的传统基准，即 100% 缩放</td>
+</tr>
+<tr>
+<td>缩放比例怎么算</td>
+<td>缩放比例 = DPI / 96</td>
+</tr>
+<tr>
+<td>DPI 会改变图片像素吗</td>
+<td>不会，只影响显示与打印的物理尺寸</td>
+</tr>
+<tr>
+<td>DPI 和屏幕分辨率一样吗</td>
+<td>不一样，分辨率指像素总数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一96-dpi-是什么意思">一、96 DPI 是什么意思</h2>
+<p>Windows 把 96 DPI 作为传统标准基准，也就是 100% 缩放。常见的对应关系如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DPI</th>
+<th style="text-align: right;">缩放比例</th>
+<th>Windows 显示设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">100%</td>
+<td>100%（推荐大小）</td>
+</tr>
+<tr>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">125%</td>
+<td>125%</td>
+</tr>
+<tr>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">150%</td>
+<td>150%</td>
+</tr>
+<tr>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">200%</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<p>计算公式：</p>
+<p><code>缩放比例 = DPI / 96</code></p>
+<p>例如 144 DPI：144 / 96 = 1.5，即 150% 缩放。</p>
+<h2 id="二dpi-如何影响界面大小">二、DPI 如何影响界面大小</h2>
+<p>假设一个窗口的逻辑尺寸是 800 × 600（即 100% 下的大小）：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DPI</th>
+<th style="text-align: right;">缩放比例</th>
+<th style="text-align: right;">实际显示尺寸</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">800 × 600 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">125%</td>
+<td style="text-align: right;">1000 × 750 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">150%</td>
+<td style="text-align: right;">1200 × 900 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">200%</td>
+<td style="text-align: right;">1600 × 1200 px</td>
+</tr>
+</tbody>
+</table>
+<p>DPI 越高，界面元素显示得越大。这样做的目的，是让不同分辨率、不同像素密度的屏幕都能获得合适的显示效果，而不是让高 DPI 屏幕上的按钮和文字小到看不清。</p>
+<h2 id="三dpi分辨率ppi-有什么区别">三、DPI、分辨率、PPI 有什么区别</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>名称</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分辨率（Resolution）</td>
+<td>拥有多少像素</td>
+<td>1920 × 1080</td>
+</tr>
+<tr>
+<td>DPI</td>
+<td>界面绘制的缩放基准</td>
+<td>96 DPI、144 DPI</td>
+</tr>
+<tr>
+<td>PPI（Pixels Per Inch）</td>
+<td>屏幕实际的物理像素密度</td>
+<td>同尺寸下分辨率越高，PPI 越高</td>
+</tr>
+</tbody>
+</table>
+<p>同样是 1920 × 1080 的两台显示器，屏幕尺寸不同，PPI 就不同；Windows 的 DPI 缩放则负责把程序界面调整到合适的视觉大小。</p>
+<h2 id="四dpi-会改变图片的像素吗">四、DPI 会改变图片的像素吗</h2>
+<p>不会。一张 800 × 600 像素的图片，无论标记为 96 DPI 还是 300 DPI，像素数量都不变。</p>
+<p>DPI 只影响换算出来的打印（物理）尺寸：</p>
+<p><code>物理尺寸（英寸） = 像素数量 / DPI</code></p>
+<p>例如 800 像素宽的图片：</p>
+<ul>
+<li>96 DPI：约 8.33 英寸</li>
+<li>300 DPI：约 2.67 英寸</li>
+</ul>
+<p>屏幕上的实际显示大小，还取决于程序自身如何处理 DPI。</p>
+<h2 id="五与-recticon-的关系">五、与 RectIcon 的关系</h2>
+<ul>
+<li>RectIcon 适配 100% - 200% 的 Windows 缩放。</li>
+<li>截图得到的是屏幕像素，屏幕缩放会直接影响选框在屏幕上覆盖的范围。</li>
+<li>为减少图片缩放造成的差异，RectIcon 限制了选框的自由缩放，提供正方、横长、竖长等固定比例模式。</li>
+</ul>
+<h2 id="六小结">六、小结</h2>
+<ul>
+<li><strong>96 DPI</strong> 是 Windows 传统的 100% 缩放基准。</li>
+<li><strong>DPI 越高</strong>，界面元素显示得越大。</li>
+<li><strong>DPI 不改变图片像素</strong>，只影响换算尺寸。</li>
+<li><strong>DPI 不等于分辨率</strong>，两者描述的不是同一件事。</li>
+<li>正确处理 DPI，程序才能在 100%、125%、150%、200% 等缩放环境下保持良好显示效果。</li>
+</ul>
+<p>相关内容：<a href="0408WhatsIco.html">什么是 ICO 图标</a> · <a href="0403CommonRatio.html">常见图片比例</a> · <a href="0405PicBasicKnow.html">图片基础知识</a></p>
+
+      </article>
+      <nav class="page-nav" aria-label="Page navigation">
+<a class="page-nav-link page-nav-prev" href="0406PicFormat.html"><span class="page-nav-label">&larr; Previous</span><span class="page-nav-title">图片格式怎么选？</span></a>
+<a class="page-nav-link page-nav-next" href="0408WhatsIco.html"><span class="page-nav-label">Next &rarr;</span><span class="page-nav-title">什么是 ICO 图标？</span></a>
+      </nav>
+    </main>
+    <aside class="outline" aria-label="本页目录">
+      <nav class="page-outline">
+        <p class="outline-title">本页目录</p>
+        <ul class="outline-list outline-level-0">
+          <li class="outline-item"><a href="#速览">速览</a></li>
+          <li class="outline-item"><a href="#一96-dpi-是什么意思">一、96 DPI 是什么意思</a></li>
+          <li class="outline-item"><a href="#二dpi-如何影响界面大小">二、DPI 如何影响界面大小</a></li>
+          <li class="outline-item"><a href="#三dpi分辨率ppi-有什么区别">三、DPI、分辨率、PPI 有什么区别</a></li>
+          <li class="outline-item"><a href="#四dpi-会改变图片的像素吗">四、DPI 会改变图片的像素吗</a></li>
+          <li class="outline-item"><a href="#五与-recticon-的关系">五、与 RectIcon 的关系</a></li>
+          <li class="outline-item"><a href="#六小结">六、小结</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p class="site-footer-copyright">Copyright &copy; 2026 Alsk</p>
+    <p class="site-footer-note">Built from DocTool</p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

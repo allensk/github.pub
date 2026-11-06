@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="http://doc.alskp.xyz/doc/recticon/0405PicBasicKnow.html" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta name="generator" content="DocTool" />
+  <meta name="description" content="RectIcon Doc / 文档" />
+  <title>图片基础知识：压缩、位图与失真 - RectIcon Doc / 文档</title>
+  <script>document.documentElement.className += ' has-js';</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+  <header class="site-header">
+    <label class="nav-toggle-label" for="nav-toggle" title="Toggle navigation">&#9776;</label>
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="" /><span class="brand-name">RectIcon Doc / 文档</span></a>
+    <nav class="site-langs" aria-label="Language"><span class="lang-link is-current" lang="zh-CN" aria-current="true">中文</span><a class="lang-link" lang="en" hreflang="en" href="en/0405PicBasicKnow.html">English</a></nav>
+  </header>
+  <div class="layout has-outline">
+    <aside class="sidebar">
+      <nav class="site-nav" aria-label="Site navigation">
+<ul class="nav-list nav-level-0">
+<li class="nav-item"><a href="index.html">主页</a></li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">介绍</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-0" data-nav="介绍"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse 介绍</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-0">
+<li class="nav-item"><a href="0010Introduction.html">简介</a></li>
+<li class="nav-item"><a href="0011Operations.html">操作</a></li>
+<li class="nav-item"><a href="0012UseCase.html">用例</a></li>
+</ul>
+</li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">关于</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-1" data-nav="关于"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse 关于</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-1">
+<li class="nav-item"><a href="0060About.html">关于</a></li>
+<li class="nav-item"><a href="0061License.html">条款</a></li>
+<li class="nav-item"><a href="0062ChangeLog.html">版本变更</a></li>
+<li class="nav-item"><a href="0063Support.html">支持</a></li>
+</ul>
+</li>
+<li class="nav-section is-active-section">
+<div class="nav-section-head"><span class="nav-section-title">知识 (AI)</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-2" data-nav="知识 (AI)"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse 知识 (AI)</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-2">
+<li class="nav-item"><a href="0403CommonRatio.html">常见图片比例与用途</a></li>
+<li class="nav-item"><a href="0404CommonResolution.html">主流网站图片尺寸速查</a></li>
+<li class="nav-item is-active"><a href="0405PicBasicKnow.html" aria-current="page">图片基础知识：压缩、位图与失真</a></li>
+<li class="nav-item"><a href="0406PicFormat.html">图片格式怎么选？</a></li>
+<li class="nav-item"><a href="0407WhatsDPI.html">什么是 DPI？</a></li>
+<li class="nav-item"><a href="0408WhatsIco.html">什么是 ICO 图标？</a></li>
+</ul>
+</li>
+</ul>
+      </nav>
+    </aside>
+    <script>
+"use strict";(function(){const s="doctool.nav.folded",r=Array.from(document.querySelectorAll(".nav-fold-toggle")),a=()=>{try{const t=JSON.parse(window.localStorage.getItem(s)||"[]");return Array.isArray(t)?t.filter(e=>typeof e=="string"):[]}catch{return[]}},c=t=>{try{window.localStorage.setItem(s,JSON.stringify(Array.from(t)))}catch{}},n=(t,e)=>{const o=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-expanded",e?"false":"true"),t.closest(".nav-section").classList.toggle("is-folded",e),o&&(o.hidden=e)};try{if(r.length>0){const t=new Set(a());window.__docToolNavFold={store:s,toggles:r,folded:t,apply:n,write:c};for(const e of r){const o=e.closest(".nav-section").classList.contains("is-active-section");n(e,t.has(e.dataset.nav)&&!o)}}}finally{document.documentElement.classList.add("is-nav-ready")}})();
+    </script>
+    <main class="content" id="content">
+      <article class="markdown-body">
+<h1 id="图片基础知识压缩位图与失真">图片基础知识：压缩、位图与失真</h1>
+<p>使用图片时经常会遇到几个问题：</p>
+<ul>
+<li>为什么有些图片文件很大，有些却很小？</li>
+<li>为什么图片放大后会变模糊？</li>
+<li>为什么有些 Logo 放大后依然清晰？</li>
+</ul>
+<p>理解下面几个基础概念，就能明白原因。</p>
+<h2 id="速览">速览</h2>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>一句话理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无损压缩</td>
+<td>解压后能完整还原原图，如 PNG</td>
+</tr>
+<tr>
+<td>有损压缩</td>
+<td>舍弃部分细节换取更小体积，如 JPG</td>
+</tr>
+<tr>
+<td>位图</td>
+<td>由像素点组成，缩放会失真</td>
+</tr>
+<tr>
+<td>矢量图</td>
+<td>由数学描述构成，缩放不失真</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一无损压缩与有损压缩">一、无损压缩与有损压缩</h2>
+<h3 id="无损压缩">无损压缩</h3>
+<p>不会丢失原始数据，解压后可以完整还原原图，例如 <strong>PNG</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保留原始画质，压缩不损失画质</td>
+<td>文件通常比较大</td>
+</tr>
+<tr>
+<td>支持透明背景</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="有损压缩">有损压缩</h3>
+<p>舍弃一部分图像信息，以换取更小的文件体积，例如 <strong>JPEG（JPG）</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件体积通常较小</td>
+<td>压缩可能造成画质损失</td>
+</tr>
+<tr>
+<td>特别适合照片、风景等内容</td>
+<td>反复编辑保存会进一步降低画质</td>
+</tr>
+</tbody>
+</table>
+<p><strong>简单理解：</strong></p>
+<ul>
+<li>PNG：尽量保留所有细节，文件可能较大。</li>
+<li>JPEG：牺牲一部分细节，换取更小的文件。</li>
+</ul>
+<h2 id="二位图与矢量图">二、位图与矢量图</h2>
+<h3 id="位图raster-graphics">位图（Raster Graphics）</h3>
+<p>位图由一个个像素（Pixel）组成，每个像素记录对应位置的颜色。</p>
+<p>以分辨率为 1920 × 1080 的图片为例：</p>
+<ul>
+<li>横向有 1920 个像素</li>
+<li>纵向有 1080 个像素</li>
+<li>所有像素组合起来，形成完整图像</li>
+</ul>
+<p>可以把它理解为一张由很多小色块拼成的图片。</p>
+<p>常见格式：JPG、PNG、WebP、BMP。</p>
+<h3 id="矢量图vector-graphics">矢量图（Vector Graphics）</h3>
+<p>矢量图不直接记录每个像素的颜色，而是用数学描述表示图形，例如线条、曲线、形状和颜色，显示时按需重新计算。</p>
+<table>
+<thead>
+<tr>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>可以自由放大、缩小</td>
+<td>不适合表现照片等复杂细节</td>
+</tr>
+<tr>
+<td>缩放不会产生像素模糊</td>
+<td>需要专门的软件创作</td>
+</tr>
+<tr>
+<td>特别适合 Logo、图标、线条和简单图形</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>常见格式：SVG。</p>
+<h2 id="三为什么位图缩放会失真">三、为什么位图缩放会失真</h2>
+<p>位图的像素数量是有限的，尺寸一变，像素就必须重新处理。</p>
+<h3 id="图片缩小">图片缩小</h3>
+<p>例如把 512 × 512 缩到 256 × 256：像素从 262,144 个变成 65,536 个。</p>
+<p>系统需要合并或重新计算像素，部分原始细节会丢失，所以缩小后的图片无法完整还原成原图。</p>
+<h3 id="图片放大">图片放大</h3>
+<p>例如把 3 × 3 放大到 4 × 4：原图只有 9 个像素，放大后要显示 16 个像素。</p>
+<p>新增的像素没有原始数据，系统只能根据周围像素估算颜色，因此可能出现模糊、锯齿等现象。</p>
+<p><strong>简单理解：</strong></p>
+<ul>
+<li>缩小：像素减少，部分细节丢失。</li>
+<li>放大：像素增加，新增细节只能估算。</li>
+</ul>
+<h2 id="四抗锯齿能改善什么">四、抗锯齿能改善什么</h2>
+<p>抗锯齿（Anti-aliasing）通过平滑边缘像素之间的颜色过渡，减少线条和图形边缘的锯齿感。</p>
+<p>例如放大一条斜线时，直接复制像素会呈现明显的阶梯状；经过抗锯齿处理后，边缘会更平滑。</p>
+<p>需要注意：抗锯齿只改善视觉效果，<strong>不能恢复已经丢失的原始细节</strong>。</p>
+<h2 id="五与-recticon-的关系">五、与 RectIcon 的关系</h2>
+<ul>
+<li>RectIcon 导出 PNG，属于无损格式，适合截图、图标和透明图片，反复使用不会掉画质。</li>
+<li>截图之后放大或缩小图片，位图依然会失真——需要多种尺寸时，最好按目标尺寸重新截取，而不是把小图放大。</li>
+<li>内置编辑器的裁剪、缩放、透明都基于像素处理，操作后可以用撤销菜单还原。</li>
+</ul>
+<h2 id="六总结">六、总结</h2>
+<table>
+<thead>
+<tr>
+<th>对比项目</th>
+<th>位图</th>
+<th>矢量图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>表示方式</td>
+<td>像素</td>
+<td>数学描述的图形</td>
+</tr>
+<tr>
+<td>放大效果</td>
+<td>可能模糊、失真</td>
+<td>不会因缩放而失真</td>
+</tr>
+<tr>
+<td>缩小效果</td>
+<td>可能丢失细节</td>
+<td>可以重新计算图形</td>
+</tr>
+<tr>
+<td>适合内容</td>
+<td>照片、风景、复杂图像</td>
+<td>Logo、图标、线条图形</td>
+</tr>
+<tr>
+<td>常见格式</td>
+<td>JPG、PNG、WebP</td>
+<td>SVG</td>
+</tr>
+</tbody>
+</table>
+<p>日常使用记住这几条：</p>
+<ul>
+<li><strong>PNG</strong>：无损压缩，适合截图、透明图片和图标。</li>
+<li><strong>JPEG</strong>：有损压缩，适合照片，文件通常较小。</li>
+<li><strong>位图</strong>：放大、缩小都可能影响画质。</li>
+<li><strong>矢量图</strong>：可以自由缩放，适合 Logo 和图标。</li>
+<li><strong>抗锯齿</strong>：让边缘更平滑，但不能恢复丢失的细节。</li>
+</ul>
+<h2 id="七延伸学习">七、延伸学习</h2>
+<p>这里只做浅显介绍，想进一步了解可以用这些关键词搜索：</p>
+<ul>
+<li>位图（Raster Graphics）</li>
+<li>矢量图（Vector Graphics）</li>
+<li>无损压缩（Lossless Compression）</li>
+<li>有损压缩（Lossy Compression）</li>
+<li>位图缩放失真（Raster Image Scaling）</li>
+<li>抗锯齿（Anti-aliasing）</li>
+<li>PNG</li>
+<li>JPEG</li>
+</ul>
+<p>相关内容：<a href="0406PicFormat.html">图片格式怎么选</a> · <a href="0408WhatsIco.html">什么是 ICO 图标</a></p>
+
+      </article>
+      <nav class="page-nav" aria-label="Page navigation">
+<a class="page-nav-link page-nav-prev" href="0404CommonResolution.html"><span class="page-nav-label">&larr; Previous</span><span class="page-nav-title">主流网站图片尺寸速查</span></a>
+<a class="page-nav-link page-nav-next" href="0406PicFormat.html"><span class="page-nav-label">Next &rarr;</span><span class="page-nav-title">图片格式怎么选？</span></a>
+      </nav>
+    </main>
+    <aside class="outline" aria-label="本页目录">
+      <nav class="page-outline">
+        <p class="outline-title">本页目录</p>
+        <ul class="outline-list outline-level-0">
+          <li class="outline-item"><a href="#速览">速览</a></li>
+          <li class="outline-item"><a href="#一无损压缩与有损压缩">一、无损压缩与有损压缩</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#无损压缩">无损压缩</a></li>
+            <li class="outline-item"><a href="#有损压缩">有损压缩</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#二位图与矢量图">二、位图与矢量图</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#位图raster-graphics">位图（Raster Graphics）</a></li>
+            <li class="outline-item"><a href="#矢量图vector-graphics">矢量图（Vector Graphics）</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#三为什么位图缩放会失真">三、为什么位图缩放会失真</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#图片缩小">图片缩小</a></li>
+            <li class="outline-item"><a href="#图片放大">图片放大</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#四抗锯齿能改善什么">四、抗锯齿能改善什么</a></li>
+          <li class="outline-item"><a href="#五与-recticon-的关系">五、与 RectIcon 的关系</a></li>
+          <li class="outline-item"><a href="#六总结">六、总结</a></li>
+          <li class="outline-item"><a href="#七延伸学习">七、延伸学习</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p class="site-footer-copyright">Copyright &copy; 2026 Alsk</p>
+    <p class="site-footer-note">Built from DocTool</p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="http://doc.alskp.xyz/doc/recticon/en/0407WhatsDPI.html" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta name="generator" content="DocTool" />
+  <meta name="description" content="RectIcon Doc / 文档" />
+  <title>What is DPI? - RectIcon Doc / 文档</title>
+  <script>document.documentElement.className += ' has-js';</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+  <header class="site-header">
+    <label class="nav-toggle-label" for="nav-toggle" title="Toggle navigation">&#9776;</label>
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="" /><span class="brand-name">RectIcon Doc / 文档</span></a>
+    <nav class="site-langs" aria-label="Language"><a class="lang-link" lang="zh-CN" hreflang="zh-CN" href="../0407WhatsDPI.html">中文</a><span class="lang-link is-current" lang="en" aria-current="true">English</span></nav>
+  </header>
+  <div class="layout has-outline">
+    <aside class="sidebar">
+      <nav class="site-nav" aria-label="Site navigation">
+<ul class="nav-list nav-level-0">
+<li class="nav-item"><a href="index.html">Home</a></li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">Introduction</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-0" data-nav="Introduction"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Introduction</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-0">
+<li class="nav-item"><a href="0010Introduction.html">Introduction</a></li>
+<li class="nav-item"><a href="0011Operations.html">Operations</a></li>
+<li class="nav-item"><a href="0012UseCase.html">Use cases</a></li>
+</ul>
+</li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">About</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-1" data-nav="About"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse About</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-1">
+<li class="nav-item"><a href="0060About.html">About</a></li>
+<li class="nav-item"><a href="0061License.html">License</a></li>
+<li class="nav-item"><a href="0062ChangeLog.html">Change log</a></li>
+<li class="nav-item"><a href="0063Support.html">Support</a></li>
+</ul>
+</li>
+<li class="nav-section is-active-section">
+<div class="nav-section-head"><span class="nav-section-title">Knowledge (AI)</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-2" data-nav="Knowledge (AI)"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Knowledge (AI)</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-2">
+<li class="nav-item"><a href="0403CommonRatio.html">Common image ratios and their uses</a></li>
+<li class="nav-item"><a href="0404CommonResolution.html">Social media image size quick reference</a></li>
+<li class="nav-item"><a href="0405PicBasicKnow.html">Image basics: compression, raster and distortion</a></li>
+<li class="nav-item"><a href="0406PicFormat.html">How to choose an image format?</a></li>
+<li class="nav-item is-active"><a href="0407WhatsDPI.html" aria-current="page">What is DPI?</a></li>
+<li class="nav-item"><a href="0408WhatsIco.html">What is an ICO icon?</a></li>
+</ul>
+</li>
+</ul>
+      </nav>
+    </aside>
+    <script>
+"use strict";(function(){const s="doctool.nav.folded",r=Array.from(document.querySelectorAll(".nav-fold-toggle")),a=()=>{try{const t=JSON.parse(window.localStorage.getItem(s)||"[]");return Array.isArray(t)?t.filter(e=>typeof e=="string"):[]}catch{return[]}},c=t=>{try{window.localStorage.setItem(s,JSON.stringify(Array.from(t)))}catch{}},n=(t,e)=>{const o=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-expanded",e?"false":"true"),t.closest(".nav-section").classList.toggle("is-folded",e),o&&(o.hidden=e)};try{if(r.length>0){const t=new Set(a());window.__docToolNavFold={store:s,toggles:r,folded:t,apply:n,write:c};for(const e of r){const o=e.closest(".nav-section").classList.contains("is-active-section");n(e,t.has(e.dataset.nav)&&!o)}}}finally{document.documentElement.classList.add("is-nav-ready")}})();
+    </script>
+    <main class="content" id="content">
+      <article class="markdown-body">
+<h1 id="what-is-dpi">What is DPI?</h1>
+<p>DPI stands for <strong>Dots Per Inch</strong>, it describes the dot density of a display or a print.</p>
+<p>In Windows desktop programs, DPI is more often used as another word for the <strong>interface scaling ratio</strong>: the system uses DPI to decide how big windows, buttons, text, icons and pictures appear.</p>
+<figure>
+<img src="./images/0401_01.PNG" alt="Windows DPI scaling" />
+<figcaption aria-hidden="true">Windows DPI scaling</figcaption>
+</figure>
+<h2 id="at-a-glance">At a glance</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is 96 DPI</td>
+<td>The traditional Windows baseline, i.e. 100% scaling</td>
+</tr>
+<tr>
+<td>How to compute scaling</td>
+<td>Scaling = DPI / 96</td>
+</tr>
+<tr>
+<td>Does DPI change picture pixels</td>
+<td>No, it only affects display and print physical size</td>
+</tr>
+<tr>
+<td>Is DPI the same as screen resolution</td>
+<td>No, resolution counts total pixels</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一what-does-96-dpi-mean">一、What does 96 DPI mean</h2>
+<p>Windows uses 96 DPI as the traditional standard baseline, which is 100% scaling. The common pairs are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DPI</th>
+<th style="text-align: right;">Scaling</th>
+<th>Windows display setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">100%</td>
+<td>100% (recommended)</td>
+</tr>
+<tr>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">125%</td>
+<td>125%</td>
+</tr>
+<tr>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">150%</td>
+<td>150%</td>
+</tr>
+<tr>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">200%</td>
+<td>200%</td>
+</tr>
+</tbody>
+</table>
+<p>The formula:</p>
+<p><code>Scaling = DPI / 96</code></p>
+<p>For example 144 DPI: 144 / 96 = 1.5, that is 150% scaling.</p>
+<h2 id="二how-dpi-affects-interface-size">二、How DPI affects interface size</h2>
+<p>Take a window with a logical size of 800 × 600 (its size at 100%):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">DPI</th>
+<th style="text-align: right;">Scaling</th>
+<th style="text-align: right;">Actual display size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">800 × 600 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">125%</td>
+<td style="text-align: right;">1000 × 750 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">144</td>
+<td style="text-align: right;">150%</td>
+<td style="text-align: right;">1200 × 900 px</td>
+</tr>
+<tr>
+<td style="text-align: right;">192</td>
+<td style="text-align: right;">200%</td>
+<td style="text-align: right;">1600 × 1200 px</td>
+</tr>
+</tbody>
+</table>
+<p>The higher the DPI, the bigger the interface elements appear. The point is that screens with different resolutions and pixel densities all get a comfortable display, instead of buttons and text becoming tiny on high DPI screens.</p>
+<h2 id="三dpi-resolution-and-ppi">三、DPI, resolution and PPI</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resolution</td>
+<td>How many pixels there are</td>
+<td>1920 × 1080</td>
+</tr>
+<tr>
+<td>DPI</td>
+<td>The scaling baseline used to draw the interface</td>
+<td>96 DPI, 144 DPI</td>
+</tr>
+<tr>
+<td>PPI (Pixels Per Inch)</td>
+<td>The physical pixel density of the screen</td>
+<td>Same size, higher resolution → higher PPI</td>
+</tr>
+</tbody>
+</table>
+<p>Two 1920 × 1080 monitors with different physical sizes have different PPI; Windows DPI scaling adjusts program interfaces to a comfortable visual size.</p>
+<h2 id="四does-dpi-change-the-pixels-of-a-picture">四、Does DPI change the pixels of a picture</h2>
+<p>No. An 800 × 600 pixel picture marked 96 DPI or 300 DPI still has 800 × 600 pixels.</p>
+<p>DPI only affects the print (physical) size computed from it:</p>
+<p><code>Physical size (inches) = pixel count / DPI</code></p>
+<p>For an 800 pixel wide picture:</p>
+<ul>
+<li>96 DPI: about 8.33 inches</li>
+<li>300 DPI: about 2.67 inches</li>
+</ul>
+<p>How big it looks on screen also depends on how the program itself handles DPI.</p>
+<h2 id="五how-this-relates-to-recticon">五、How this relates to RectIcon</h2>
+<ul>
+<li>RectIcon fits Windows scaling from 100% to 200%.</li>
+<li>A capture is made of screen pixels, the screen scaling directly affects the screen area the selection covers.</li>
+<li>To reduce the differences scaling causes, RectIcon limits freeform scaling of the selection and offers fixed ratio modes such as square, landscape and portrait.</li>
+</ul>
+<h2 id="六summary">六、Summary</h2>
+<ul>
+<li><strong>96 DPI</strong> is the traditional 100% scaling baseline of Windows.</li>
+<li><strong>Higher DPI</strong> means bigger interface elements.</li>
+<li><strong>DPI does not change picture pixels</strong>, only the computed size.</li>
+<li><strong>DPI is not resolution</strong>, they describe different things.</li>
+<li>Handling DPI properly keeps the program displaying well at 100%, 125%, 150%, 200% and other scaling levels.</li>
+</ul>
+<p>Related: <a href="0408WhatsIco.html">What is an ICO icon</a> · <a href="0403CommonRatio.html">Common image ratios</a> · <a href="0405PicBasicKnow.html">Image basics</a></p>
+
+      </article>
+      <nav class="page-nav" aria-label="Page navigation">
+<a class="page-nav-link page-nav-prev" href="0406PicFormat.html"><span class="page-nav-label">&larr; Previous</span><span class="page-nav-title">How to choose an image format?</span></a>
+<a class="page-nav-link page-nav-next" href="0408WhatsIco.html"><span class="page-nav-label">Next &rarr;</span><span class="page-nav-title">What is an ICO icon?</span></a>
+      </nav>
+    </main>
+    <aside class="outline" aria-label="On this page">
+      <nav class="page-outline">
+        <p class="outline-title">On this page</p>
+        <ul class="outline-list outline-level-0">
+          <li class="outline-item"><a href="#at-a-glance">At a glance</a></li>
+          <li class="outline-item"><a href="#一what-does-96-dpi-mean">一、What does 96 DPI mean</a></li>
+          <li class="outline-item"><a href="#二how-dpi-affects-interface-size">二、How DPI affects interface size</a></li>
+          <li class="outline-item"><a href="#三dpi-resolution-and-ppi">三、DPI, resolution and PPI</a></li>
+          <li class="outline-item"><a href="#四does-dpi-change-the-pixels-of-a-picture">四、Does DPI change the pixels of a picture</a></li>
+          <li class="outline-item"><a href="#五how-this-relates-to-recticon">五、How this relates to RectIcon</a></li>
+          <li class="outline-item"><a href="#六summary">六、Summary</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p class="site-footer-copyright">Copyright &copy; 2026 Alsk</p>
+    <p class="site-footer-note">Built from DocTool</p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="http://doc.alskp.xyz/doc/recticon/en/0405PicBasicKnow.html" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta name="generator" content="DocTool" />
+  <meta name="description" content="RectIcon Doc / 文档" />
+  <title>Image basics: compression, raster and distortion - RectIcon Doc / 文档</title>
+  <script>document.documentElement.className += ' has-js';</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+  <header class="site-header">
+    <label class="nav-toggle-label" for="nav-toggle" title="Toggle navigation">&#9776;</label>
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="" /><span class="brand-name">RectIcon Doc / 文档</span></a>
+    <nav class="site-langs" aria-label="Language"><a class="lang-link" lang="zh-CN" hreflang="zh-CN" href="../0405PicBasicKnow.html">中文</a><span class="lang-link is-current" lang="en" aria-current="true">English</span></nav>
+  </header>
+  <div class="layout has-outline">
+    <aside class="sidebar">
+      <nav class="site-nav" aria-label="Site navigation">
+<ul class="nav-list nav-level-0">
+<li class="nav-item"><a href="index.html">Home</a></li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">Introduction</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-0" data-nav="Introduction"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Introduction</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-0">
+<li class="nav-item"><a href="0010Introduction.html">Introduction</a></li>
+<li class="nav-item"><a href="0011Operations.html">Operations</a></li>
+<li class="nav-item"><a href="0012UseCase.html">Use cases</a></li>
+</ul>
+</li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">About</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-1" data-nav="About"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse About</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-1">
+<li class="nav-item"><a href="0060About.html">About</a></li>
+<li class="nav-item"><a href="0061License.html">License</a></li>
+<li class="nav-item"><a href="0062ChangeLog.html">Change log</a></li>
+<li class="nav-item"><a href="0063Support.html">Support</a></li>
+</ul>
+</li>
+<li class="nav-section is-active-section">
+<div class="nav-section-head"><span class="nav-section-title">Knowledge (AI)</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-2" data-nav="Knowledge (AI)"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Knowledge (AI)</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-2">
+<li class="nav-item"><a href="0403CommonRatio.html">Common image ratios and their uses</a></li>
+<li class="nav-item"><a href="0404CommonResolution.html">Social media image size quick reference</a></li>
+<li class="nav-item is-active"><a href="0405PicBasicKnow.html" aria-current="page">Image basics: compression, raster and distortion</a></li>
+<li class="nav-item"><a href="0406PicFormat.html">How to choose an image format?</a></li>
+<li class="nav-item"><a href="0407WhatsDPI.html">What is DPI?</a></li>
+<li class="nav-item"><a href="0408WhatsIco.html">What is an ICO icon?</a></li>
+</ul>
+</li>
+</ul>
+      </nav>
+    </aside>
+    <script>
+"use strict";(function(){const s="doctool.nav.folded",r=Array.from(document.querySelectorAll(".nav-fold-toggle")),a=()=>{try{const t=JSON.parse(window.localStorage.getItem(s)||"[]");return Array.isArray(t)?t.filter(e=>typeof e=="string"):[]}catch{return[]}},c=t=>{try{window.localStorage.setItem(s,JSON.stringify(Array.from(t)))}catch{}},n=(t,e)=>{const o=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-expanded",e?"false":"true"),t.closest(".nav-section").classList.toggle("is-folded",e),o&&(o.hidden=e)};try{if(r.length>0){const t=new Set(a());window.__docToolNavFold={store:s,toggles:r,folded:t,apply:n,write:c};for(const e of r){const o=e.closest(".nav-section").classList.contains("is-active-section");n(e,t.has(e.dataset.nav)&&!o)}}}finally{document.documentElement.classList.add("is-nav-ready")}})();
+    </script>
+    <main class="content" id="content">
+      <article class="markdown-body">
+<h1 id="image-basics-compression-raster-and-distortion">Image basics: compression, raster and distortion</h1>
+<p>When working with pictures, a few questions come up often:</p>
+<ul>
+<li>Why are some picture files big and others small?</li>
+<li>Why does a picture get blurry when enlarged?</li>
+<li>Why do some logos stay sharp when enlarged?</li>
+</ul>
+<p>Understanding a few basic concepts explains all of it.</p>
+<h2 id="at-a-glance">At a glance</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concept</th>
+<th>One sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lossless compression</td>
+<td>Decompresses back to the original picture, like PNG</td>
+</tr>
+<tr>
+<td>Lossy compression</td>
+<td>Trades some detail for a smaller file, like JPG</td>
+</tr>
+<tr>
+<td>Raster image</td>
+<td>Made of pixels, scaling distorts it</td>
+</tr>
+<tr>
+<td>Vector image</td>
+<td>Made of math descriptions, scaling never distorts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="一lossless-and-lossy-compression">一、Lossless and lossy compression</h2>
+<h3 id="lossless-compression">Lossless compression</h3>
+<p>Loses no original data, decompressing restores the complete original picture, for example <strong>PNG</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keeps the original quality, compression does not lose quality</td>
+<td>The file is usually bigger</td>
+</tr>
+<tr>
+<td>Supports transparent backgrounds</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lossy-compression">Lossy compression</h3>
+<p>Drops part of the image information to get a smaller file, for example <strong>JPEG (JPG)</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The file is usually smaller</td>
+<td>Compression may lose quality</td>
+</tr>
+<tr>
+<td>Especially good for photos and scenery</td>
+<td>Repeated editing and saving lowers quality further</td>
+</tr>
+</tbody>
+</table>
+<p><strong>In short:</strong></p>
+<ul>
+<li>PNG: keeps all the details, the file may be bigger.</li>
+<li>JPEG: trades some detail for a smaller file.</li>
+</ul>
+<h2 id="二raster-and-vector-images">二、Raster and vector images</h2>
+<h3 id="raster-images-raster-graphics">Raster images (Raster Graphics)</h3>
+<p>A raster image is made of pixels (Pixel), each pixel records the color of its position.</p>
+<p>Take a 1920 × 1080 picture:</p>
+<ul>
+<li>1920 pixels across</li>
+<li>1080 pixels down</li>
+<li>all the pixels together form the complete image</li>
+</ul>
+<p>Think of it as a picture assembled from many small colored blocks.</p>
+<p>Common formats: JPG, PNG, WebP, BMP.</p>
+<h3 id="vector-images-vector-graphics">Vector images (Vector Graphics)</h3>
+<p>A vector image does not record the color of each pixel, it describes shapes with math, for example lines, curves, shapes and colors, and recomputes them when displaying.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can be freely enlarged and reduced</td>
+<td>Not good for complex details like photos</td>
+</tr>
+<tr>
+<td>Scaling never causes pixel blur</td>
+<td>Needs dedicated software to create</td>
+</tr>
+<tr>
+<td>Perfect for logos, icons, lines and simple shapes</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Common format: SVG.</p>
+<h2 id="三why-scaling-a-raster-image-distorts-it">三、Why scaling a raster image distorts it</h2>
+<p>A raster image has a limited number of pixels; when the size changes, the pixels must be reworked.</p>
+<h3 id="shrinking">Shrinking</h3>
+<p>For example from 512 × 512 down to 256 × 256: the pixels go from 262,144 to 65,536.</p>
+<p>The system has to merge or recompute pixels, some original detail is lost, so a shrunken picture can never be restored to the original.</p>
+<h3 id="enlarging">Enlarging</h3>
+<p>For example from 3 × 3 up to 4 × 4: the original has 9 pixels, the enlarged picture needs 16.</p>
+<p>The new pixels have no original data, the system can only estimate their colors from the neighbors, so the picture may become blurry or jagged.</p>
+<p><strong>In short:</strong></p>
+<ul>
+<li>Shrinking: fewer pixels, some detail is lost.</li>
+<li>Enlarging: more pixels, the new detail can only be estimated.</li>
+</ul>
+<h2 id="四what-anti-aliasing-can-do">四、What anti-aliasing can do</h2>
+<p>Anti-aliasing smooths the color transition between edge pixels and reduces the jagged feel of lines and shapes.</p>
+<p>For example, enlarging a slanted line by copying pixels shows clear stair steps; with anti-aliasing the edge looks smoother.</p>
+<p>Note: anti-aliasing only improves the visual effect, it <strong>cannot restore the original detail that was lost</strong>.</p>
+<h2 id="五how-this-relates-to-recticon">五、How this relates to RectIcon</h2>
+<ul>
+<li>RectIcon exports PNG, a lossless format, good for screenshots, icons and transparent pictures, quality does not degrade with reuse.</li>
+<li>After a capture, enlarging or shrinking the picture still distorts a raster image — when you need several sizes, capture again at the target size instead of enlarging a small picture.</li>
+<li>The built-in editor’s crop, zoom and transparency are pixel based; use the Undo menu to restore after an operation.</li>
+</ul>
+<h2 id="六summary">六、Summary</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Compare</th>
+<th>Raster</th>
+<th>Vector</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Representation</td>
+<td>Pixels</td>
+<td>Math described shapes</td>
+</tr>
+<tr>
+<td>Enlarging</td>
+<td>May blur and distort</td>
+<td>Scaling never distorts</td>
+</tr>
+<tr>
+<td>Shrinking</td>
+<td>May lose detail</td>
+<td>Shapes are recomputed</td>
+</tr>
+<tr>
+<td>Good for</td>
+<td>Photos, scenery, complex images</td>
+<td>Logos, icons, line graphics</td>
+</tr>
+<tr>
+<td>Common formats</td>
+<td>JPG, PNG, WebP</td>
+<td>SVG</td>
+</tr>
+</tbody>
+</table>
+<p>Remember these for daily use:</p>
+<ul>
+<li><strong>PNG</strong>: lossless, good for screenshots, transparent pictures and icons.</li>
+<li><strong>JPEG</strong>: lossy, good for photos, usually smaller files.</li>
+<li><strong>Raster</strong>: enlarging or shrinking can hurt quality.</li>
+<li><strong>Vector</strong>: scales freely, good for logos and icons.</li>
+<li><strong>Anti-aliasing</strong>: makes edges smoother, but cannot recover lost detail.</li>
+</ul>
+<h2 id="七learn-more">七、Learn more</h2>
+<p>This is only a short introduction, search these keywords to learn more:</p>
+<ul>
+<li>Raster Graphics</li>
+<li>Vector Graphics</li>
+<li>Lossless Compression</li>
+<li>Lossy Compression</li>
+<li>Raster Image Scaling</li>
+<li>Anti-aliasing</li>
+<li>PNG</li>
+<li>JPEG</li>
+</ul>
+<p>Related: <a href="0406PicFormat.html">How to choose an image format</a> · <a href="0408WhatsIco.html">What is an ICO icon</a></p>
+
+      </article>
+      <nav class="page-nav" aria-label="Page navigation">
+<a class="page-nav-link page-nav-prev" href="0404CommonResolution.html"><span class="page-nav-label">&larr; Previous</span><span class="page-nav-title">Social media image size quick reference</span></a>
+<a class="page-nav-link page-nav-next" href="0406PicFormat.html"><span class="page-nav-label">Next &rarr;</span><span class="page-nav-title">How to choose an image format?</span></a>
+      </nav>
+    </main>
+    <aside class="outline" aria-label="On this page">
+      <nav class="page-outline">
+        <p class="outline-title">On this page</p>
+        <ul class="outline-list outline-level-0">
+          <li class="outline-item"><a href="#at-a-glance">At a glance</a></li>
+          <li class="outline-item"><a href="#一lossless-and-lossy-compression">一、Lossless and lossy compression</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#lossless-compression">Lossless compression</a></li>
+            <li class="outline-item"><a href="#lossy-compression">Lossy compression</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#二raster-and-vector-images">二、Raster and vector images</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#raster-images-raster-graphics">Raster images (Raster Graphics)</a></li>
+            <li class="outline-item"><a href="#vector-images-vector-graphics">Vector images (Vector Graphics)</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#三why-scaling-a-raster-image-distorts-it">三、Why scaling a raster image distorts it</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#shrinking">Shrinking</a></li>
+            <li class="outline-item"><a href="#enlarging">Enlarging</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#四what-anti-aliasing-can-do">四、What anti-aliasing can do</a></li>
+          <li class="outline-item"><a href="#五how-this-relates-to-recticon">五、How this relates to RectIcon</a></li>
+          <li class="outline-item"><a href="#六summary">六、Summary</a></li>
+          <li class="outline-item"><a href="#七learn-more">七、Learn more</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p class="site-footer-copyright">Copyright &copy; 2026 Alsk</p>
+    <p class="site-footer-note">Built from DocTool</p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
