@@ -99,7 +99,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="一lossless-and-lossy-compression">一、Lossless and lossy compression</h2>
+<h2 id="i.-lossless-and-lossy-compression">I. Lossless and lossy compression</h2>
 <h3 id="lossless-compression">Lossless compression</h3>
 <p>Loses no original data, decompressing restores the complete original picture, for example <strong>PNG</strong>.</p>
 <table>
@@ -153,7 +153,7 @@
 <li>PNG: keeps all the details, the file may be bigger.</li>
 <li>JPEG: trades some detail for a smaller file.</li>
 </ul>
-<h2 id="二raster-and-vector-images">二、Raster and vector images</h2>
+<h2 id="ii.-raster-and-vector-images">II. Raster and vector images</h2>
 <h3 id="raster-images-raster-graphics">Raster images (Raster Graphics)</h3>
 <p>A raster image is made of pixels (Pixel), each pixel records the color of its position.</p>
 <p>Take a 1920 × 1080 picture:</p>
@@ -193,7 +193,7 @@
 </tbody>
 </table>
 <p>Common format: SVG.</p>
-<h2 id="三why-scaling-a-raster-image-distorts-it">三、Why scaling a raster image distorts it</h2>
+<h2 id="iii.-why-scaling-a-raster-image-distorts-it">III. Why scaling a raster image distorts it</h2>
 <p>A raster image has a limited number of pixels; when the size changes, the pixels must be reworked.</p>
 <h3 id="shrinking">Shrinking</h3>
 <p>For example from 512 × 512 down to 256 × 256: the pixels go from 262,144 to 65,536.</p>
@@ -206,17 +206,17 @@
 <li>Shrinking: fewer pixels, some detail is lost.</li>
 <li>Enlarging: more pixels, the new detail can only be estimated.</li>
 </ul>
-<h2 id="四what-anti-aliasing-can-do">四、What anti-aliasing can do</h2>
+<h2 id="iv.-what-anti-aliasing-can-do">IV. What anti-aliasing can do</h2>
 <p>Anti-aliasing smooths the color transition between edge pixels and reduces the jagged feel of lines and shapes.</p>
 <p>For example, enlarging a slanted line by copying pixels shows clear stair steps; with anti-aliasing the edge looks smoother.</p>
 <p>Note: anti-aliasing only improves the visual effect, it <strong>cannot restore the original detail that was lost</strong>.</p>
-<h2 id="五how-this-relates-to-recticon">五、How this relates to RectIcon</h2>
+<h2 id="v.-how-this-relates-to-recticon">V. How this relates to RectIcon</h2>
 <ul>
 <li>RectIcon exports PNG, a lossless format, good for screenshots, icons and transparent pictures, quality does not degrade with reuse.</li>
 <li>After a capture, enlarging or shrinking the picture still distorts a raster image — when you need several sizes, capture again at the target size instead of enlarging a small picture.</li>
 <li>The built-in editor’s crop, zoom and transparency are pixel based; use the Undo menu to restore after an operation.</li>
 </ul>
-<h2 id="六summary">六、Summary</h2>
+<h2 id="vi.-summary">VI. Summary</h2>
 <table>
 <colgroup>
 <col style="width: 33%" />
@@ -266,7 +266,7 @@
 <li><strong>Vector</strong>: scales freely, good for logos and icons.</li>
 <li><strong>Anti-aliasing</strong>: makes edges smoother, but cannot recover lost detail.</li>
 </ul>
-<h2 id="七learn-more">七、Learn more</h2>
+<h2 id="vii.-learn-more">VII. Learn more</h2>
 <p>This is only a short introduction, search these keywords to learn more:</p>
 <ul>
 <li>Raster Graphics</li>
@@ -291,25 +291,25 @@
         <p class="outline-title">On this page</p>
         <ul class="outline-list outline-level-0">
           <li class="outline-item"><a href="#at-a-glance">At a glance</a></li>
-          <li class="outline-item"><a href="#一lossless-and-lossy-compression">一、Lossless and lossy compression</a>
+          <li class="outline-item"><a href="#i.-lossless-and-lossy-compression">I. Lossless and lossy compression</a>
           <ul class="outline-list outline-level-1">
             <li class="outline-item"><a href="#lossless-compression">Lossless compression</a></li>
             <li class="outline-item"><a href="#lossy-compression">Lossy compression</a></li>
           </ul></li>
-          <li class="outline-item"><a href="#二raster-and-vector-images">二、Raster and vector images</a>
+          <li class="outline-item"><a href="#ii.-raster-and-vector-images">II. Raster and vector images</a>
           <ul class="outline-list outline-level-1">
             <li class="outline-item"><a href="#raster-images-raster-graphics">Raster images (Raster Graphics)</a></li>
             <li class="outline-item"><a href="#vector-images-vector-graphics">Vector images (Vector Graphics)</a></li>
           </ul></li>
-          <li class="outline-item"><a href="#三why-scaling-a-raster-image-distorts-it">三、Why scaling a raster image distorts it</a>
+          <li class="outline-item"><a href="#iii.-why-scaling-a-raster-image-distorts-it">III. Why scaling a raster image distorts it</a>
           <ul class="outline-list outline-level-1">
             <li class="outline-item"><a href="#shrinking">Shrinking</a></li>
             <li class="outline-item"><a href="#enlarging">Enlarging</a></li>
           </ul></li>
-          <li class="outline-item"><a href="#四what-anti-aliasing-can-do">四、What anti-aliasing can do</a></li>
-          <li class="outline-item"><a href="#五how-this-relates-to-recticon">五、How this relates to RectIcon</a></li>
-          <li class="outline-item"><a href="#六summary">六、Summary</a></li>
-          <li class="outline-item"><a href="#七learn-more">七、Learn more</a></li>
+          <li class="outline-item"><a href="#iv.-what-anti-aliasing-can-do">IV. What anti-aliasing can do</a></li>
+          <li class="outline-item"><a href="#v.-how-this-relates-to-recticon">V. How this relates to RectIcon</a></li>
+          <li class="outline-item"><a href="#vi.-summary">VI. Summary</a></li>
+          <li class="outline-item"><a href="#vii.-learn-more">VII. Learn more</a></li>
         </ul>
       </nav>
     </aside>
