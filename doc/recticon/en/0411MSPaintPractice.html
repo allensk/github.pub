@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="http://doc.alskp.xyz/doc/recticon/en/0411MSPaintPractice.html" />
+  <link rel="icon" href="images/favicon.png" />
+  <meta name="generator" content="DocTool" />
+  <meta name="description" content="RectIcon Doc / 文档" />
+  <title>MS Paint — Practical Use Cases - RectIcon Doc / 文档</title>
+  <script>document.documentElement.className += ' has-js';</script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+  <header class="site-header">
+    <label class="nav-toggle-label" for="nav-toggle" title="Toggle navigation">&#9776;</label>
+    <a class="brand" href="index.html"><img class="brand-logo" src="images/logo.png" alt="" /><span class="brand-name">RectIcon Doc / 文档</span></a>
+    <nav class="site-langs" aria-label="Language"><a class="lang-link" lang="zh-CN" hreflang="zh-CN" href="../0411MSPaintPractice.html">中文</a><span class="lang-link is-current" lang="en" aria-current="true">English</span></nav>
+  </header>
+  <div class="layout has-outline">
+    <aside class="sidebar">
+      <nav class="site-nav" aria-label="Site navigation">
+<ul class="nav-list nav-level-0">
+<li class="nav-item"><a href="index.html">Home</a></li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">Introduction</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-0" data-nav="Introduction"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Introduction</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-0">
+<li class="nav-item"><a href="0010Introduction.html">Introduction</a></li>
+<li class="nav-item"><a href="0011Operations.html">Operations</a></li>
+<li class="nav-item"><a href="0012UseCase.html">Use cases</a></li>
+</ul>
+</li>
+<li class="nav-section">
+<div class="nav-section-head"><span class="nav-section-title">About</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-1" data-nav="About"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse About</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-1">
+<li class="nav-item"><a href="0060About.html">About</a></li>
+<li class="nav-item"><a href="0061License.html">License</a></li>
+<li class="nav-item"><a href="0062ChangeLog.html">Change log</a></li>
+<li class="nav-item"><a href="0063Support.html">Support</a></li>
+</ul>
+</li>
+<li class="nav-section is-active-section">
+<div class="nav-section-head"><span class="nav-section-title">Knowledge (AI)</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-2" data-nav="Knowledge (AI)"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse Knowledge (AI)</span></button></div>
+<ul class="nav-list nav-level-1" id="nav-fold-2">
+<li class="nav-section is-active-section">
+<div class="nav-section-head"><span class="nav-section-title">MS Paint</span><button class="nav-fold-toggle" type="button" aria-expanded="true" aria-controls="nav-fold-3" data-nav="Knowledge (AI) / MS Paint"><span class="nav-fold-caret" aria-hidden="true"></span><span class="sr-only">Expand / collapse MS Paint</span></button></div>
+<ul class="nav-list nav-level-2" id="nav-fold-3">
+<li class="nav-item"><a href="0410MSPaintKeyboard.html">MS Paint — Keyboard Shortcuts</a></li>
+<li class="nav-item is-active"><a href="0411MSPaintPractice.html" aria-current="page">MS Paint — Practical Use Cases</a></li>
+</ul>
+</li>
+<li class="nav-item"><a href="0403CommonRatio.html">Common image ratios and their uses</a></li>
+<li class="nav-item"><a href="0404CommonResolution.html">Social media image size quick reference</a></li>
+<li class="nav-item"><a href="0405PicBasicKnow.html">Image basics: compression, raster and distortion</a></li>
+<li class="nav-item"><a href="0406PicFormat.html">How to choose an image format?</a></li>
+<li class="nav-item"><a href="0407WhatsDPI.html">What is DPI?</a></li>
+<li class="nav-item"><a href="0408WhatsIco.html">What is an ICO icon?</a></li>
+</ul>
+</li>
+</ul>
+      </nav>
+    </aside>
+    <script>
+"use strict";(function(){const s="doctool.nav.folded",r=Array.from(document.querySelectorAll(".nav-fold-toggle")),a=()=>{try{const t=JSON.parse(window.localStorage.getItem(s)||"[]");return Array.isArray(t)?t.filter(e=>typeof e=="string"):[]}catch{return[]}},c=t=>{try{window.localStorage.setItem(s,JSON.stringify(Array.from(t)))}catch{}},n=(t,e)=>{const o=document.getElementById(t.getAttribute("aria-controls"));t.setAttribute("aria-expanded",e?"false":"true"),t.closest(".nav-section").classList.toggle("is-folded",e),o&&(o.hidden=e)};try{if(r.length>0){const t=new Set(a());window.__docToolNavFold={store:s,toggles:r,folded:t,apply:n,write:c};for(const e of r){const o=e.closest(".nav-section").classList.contains("is-active-section");n(e,t.has(e.dataset.nav)&&!o)}}}finally{document.documentElement.classList.add("is-nav-ready")}})();
+    </script>
+    <main class="content" id="content">
+      <article class="markdown-body">
+<h1 id="ms-paint-practical-use-cases">MS Paint — Practical Use Cases</h1>
+<p>A concise guide to everyday image editing with Microsoft Paint on Windows 10 and Windows 11.</p>
+<h2 id="canvas-and-image-size">1. Canvas and Image Size</h2>
+<p>First, understand three different concepts:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Image Size</td>
+<td>Actual pixel dimensions of the image</td>
+</tr>
+<tr>
+<td>Canvas Size</td>
+<td>Width and height of the working area</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td>Magnification on screen; does not change image data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="change-canvas-size">Change Canvas Size</h3>
+<p><strong>Purpose:</strong> Add blank space, remove margins or create an image with exact dimensions.</p>
+<ol type="1">
+<li>Press <code>Ctrl + E</code> to open Image Properties.</li>
+<li>Select Pixels, Inches or Centimeters.</li>
+<li>Enter the desired width and height.</li>
+<li>Confirm the changes.</li>
+</ol>
+<p>Example: Change an 800 × 600 canvas to 1200 × 900.</p>
+<p>You can also drag the canvas boundary handles for quick adjustments.</p>
+<h3 id="resize-image">Resize Image</h3>
+<p><strong>Purpose:</strong> Scale the actual image content.</p>
+<ol type="1">
+<li>Press <code>Ctrl + W</code> to open Resize and Skew.</li>
+<li>Choose Percentage or Pixels.</li>
+<li>Enter the new dimensions.</li>
+<li>Keep Maintain aspect ratio enabled to prevent distortion.</li>
+<li>Confirm.</li>
+</ol>
+<p>Example: Resize 1920 × 1080 to 800 × 450.</p>
+<h3 id="rotate-flip-and-skew">Rotate, Flip and Skew</h3>
+<p><strong>Purpose:</strong> Change image orientation or apply simple distortions.</p>
+<ul>
+<li>Use Rotate to rotate 90° or 180°.</li>
+<li>Use Flip Horizontal or Flip Vertical to mirror an image.</li>
+<li>Use <code>Ctrl + W</code> to apply horizontal or vertical skew.</li>
+</ul>
+<h2 id="crop-select-and-move">2. Crop, Select and Move</h2>
+<p><strong>Purpose:</strong> Extract image regions, remove unwanted content or reposition elements.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>How to do it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rectangular selection</td>
+<td>Drag around the target area</td>
+</tr>
+<tr>
+<td>Free-form selection</td>
+<td>Draw around an irregular region</td>
+</tr>
+<tr>
+<td>Crop</td>
+<td>Select an area and click Crop</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Select and press <code>Ctrl + C</code></td>
+</tr>
+<tr>
+<td>Cut</td>
+<td>Select and press <code>Ctrl + X</code></td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Press <code>Ctrl + V</code></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Select and press <code>Delete</code></td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Drag the selected region</td>
+</tr>
+<tr>
+<td>Precise movement</td>
+<td>Use arrow keys where supported</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Transparent Selection:</strong> Enable it in the selection options to ignore the selected background color when moving or copying content. It is not equivalent to professional background removal or full alpha-channel masking.</p>
+<p>Typical uses: - Extract a button or icon from a screenshot. - Remove unwanted borders. - Move a graphic to another location. - Copy an object without its uniform background.</p>
+<h2 id="draw-and-annotate">3. Draw and Annotate</h2>
+<p><strong>Purpose:</strong> Highlight important content or create simple illustrations.</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pencil / Brush</td>
+<td>Freehand drawing</td>
+</tr>
+<tr>
+<td>Rectangle / Ellipse</td>
+<td>Highlight areas and draw shapes</td>
+</tr>
+<tr>
+<td>Line / Arrow</td>
+<td>Indicate positions or directions</td>
+</tr>
+<tr>
+<td>Text (A)</td>
+<td>Add labels and explanations</td>
+</tr>
+<tr>
+<td>Eraser</td>
+<td>Remove unwanted marks</td>
+</tr>
+<tr>
+<td>Fill</td>
+<td>Fill enclosed areas with color</td>
+</tr>
+</tbody>
+</table>
+<h3 id="useful-tips">Useful Tips</h3>
+<ul>
+<li>Use No Fill for transparent rectangle outlines.</li>
+<li>Adjust Size to control line thickness.</li>
+<li>Hold <code>Shift</code> when drawing supported shapes to constrain proportions.</li>
+<li>Use red rectangles and arrows to create clear screenshot instructions.</li>
+<li>Finish text editing by clicking outside the text box.</li>
+</ul>
+<p><strong>Example workflow: Screenshot annotation</strong></p>
+<ol type="1">
+<li>Open a screenshot.</li>
+<li>Crop unnecessary content.</li>
+<li>Draw red rectangles around important controls.</li>
+<li>Add arrows and explanatory text.</li>
+<li>Save as PNG.</li>
+</ol>
+<h2 id="color-operations">4. Color Operations</h2>
+<p><strong>Purpose:</strong> Reuse, replace and fill colors.</p>
+<h3 id="pick-a-color">Pick a Color</h3>
+<ol type="1">
+<li>Select Color Picker (eyedropper).</li>
+<li>Click a pixel in the image.</li>
+<li>Use the sampled color with other drawing tools.</li>
+</ol>
+<h3 id="fill-or-replace-a-background">Fill or Replace a Background</h3>
+<ol type="1">
+<li>Select Fill with Color.</li>
+<li>Choose the replacement color.</li>
+<li>Click the target region.</li>
+</ol>
+<p>This works best with enclosed areas and uniform backgrounds. If there are gaps, the fill may spread into neighboring areas.</p>
+<p>Typical uses: - Change a simple graphic’s background. - Maintain consistent annotation colors. - Create simple color palettes.</p>
+<h2 id="save-and-convert-image-formats">5. Save and Convert Image Formats</h2>
+<p><strong>Purpose:</strong> Preserve image quality or reduce file size.</p>
+<p>Use File → Save As to choose the output format.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Format</th>
+<th>Recommended use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PNG</td>
+<td>Screenshots, icons and graphics; supports transparency</td>
+</tr>
+<tr>
+<td>JPEG</td>
+<td>Photographs and smaller image files</td>
+</tr>
+<tr>
+<td>BMP</td>
+<td>Traditional bitmap storage</td>
+</tr>
+<tr>
+<td>GIF</td>
+<td>Static graphics with limited colors; Paint does not preserve animated GIF workflows</td>
+</tr>
+<tr>
+<td>TIFF</td>
+<td>High-quality image storage and scanning workflows</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> - JPEG uses lossy compression and does not support transparency. - PNG is generally preferable for screenshots and graphics. - Traditional Paint has limited transparency editing capabilities.</p>
+<h2 id="practical-image-workflows">6. Practical Image Workflows</h2>
+<h3 id="create-an-image-with-exact-dimensions">Create an Image with Exact Dimensions</h3>
+<ol type="1">
+<li>Create a new image.</li>
+<li>Press <code>Ctrl + E</code>.</li>
+<li>Set the required width and height in pixels.</li>
+<li>Draw or paste content.</li>
+<li>Save as PNG.</li>
+</ol>
+<h3 id="add-margins-around-an-existing-image">Add Margins Around an Existing Image</h3>
+<ol type="1">
+<li>Open the image.</li>
+<li>Press <code>Ctrl + E</code>.</li>
+<li>Increase the canvas dimensions.</li>
+<li>Confirm and inspect the additional space.</li>
+<li>Reposition the artwork if necessary.</li>
+</ol>
+<h3 id="extract-a-ui-element-from-a-screenshot">Extract a UI Element from a Screenshot</h3>
+<ol type="1">
+<li>Open the screenshot.</li>
+<li>Zoom in for precision.</li>
+<li>Select the required region.</li>
+<li>Crop the image.</li>
+<li>Save as PNG.</li>
+</ol>
+<h3 id="create-a-simple-icon">Create a Simple Icon</h3>
+<ol type="1">
+<li>Create a square canvas.</li>
+<li>Set the desired pixel dimensions.</li>
+<li>Enable gridlines if useful.</li>
+<li>Draw using simple shapes.</li>
+<li>Zoom in for pixel-level editing.</li>
+<li>Save as PNG.</li>
+</ol>
+<h3 id="create-a-transparent-background-graphic">Create a Transparent Background Graphic</h3>
+<p>Only Win11</p>
+<ol type="1">
+<li>Use a Paint version that supports transparent canvas backgrounds.</li>
+<li>Enable the transparent canvas option.</li>
+<li>Create the graphic.</li>
+<li>Save as PNG.</li>
+<li>Reopen the file to verify transparency.</li>
+</ol>
+<p>Note: Transparent Selection in classic Paint is not the same as a transparent canvas.</p>
+<h2 id="quick-operation-reference">7. Quick Operation Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Recommended operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change canvas dimensions</td>
+<td><code>Ctrl + E</code></td>
+</tr>
+<tr>
+<td>Scale image content</td>
+<td><code>Ctrl + W</code></td>
+</tr>
+<tr>
+<td>Remove unwanted areas</td>
+<td>Crop</td>
+</tr>
+<tr>
+<td>Extract an irregular object</td>
+<td>Free-form Selection</td>
+</tr>
+<tr>
+<td>Reposition image content</td>
+<td>Selection + Drag</td>
+</tr>
+<tr>
+<td>Highlight important information</td>
+<td>Rectangle + Arrow</td>
+</tr>
+<tr>
+<td>Add explanations</td>
+<td>Text tool</td>
+</tr>
+<tr>
+<td>Reuse an existing color</td>
+<td>Color Picker</td>
+</tr>
+<tr>
+<td>Fill a background</td>
+<td>Fill with Color</td>
+</tr>
+<tr>
+<td>Mirror an image</td>
+<td>Flip</td>
+</tr>
+<tr>
+<td>Correct image orientation</td>
+<td>Rotate</td>
+</tr>
+<tr>
+<td>Change screen magnification</td>
+<td>Zoom</td>
+</tr>
+<tr>
+<td>Preserve image transparency</td>
+<td>PNG with transparent canvas support</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Tip:</strong> Before editing an important image, use Save As to create a copy. This preserves the original and makes experimentation safer.</p>
+<p>Paint is ideal for quick image manipulation, screenshots, annotations, cropping and simple graphics. For advanced layers, masking and professional image composition, use a dedicated graphics editor.</p>
+
+      </article>
+      <nav class="page-nav" aria-label="Page navigation">
+<a class="page-nav-link page-nav-prev" href="0410MSPaintKeyboard.html"><span class="page-nav-label">&larr; Previous</span><span class="page-nav-title">MS Paint — Keyboard Shortcuts</span></a>
+<a class="page-nav-link page-nav-next" href="0403CommonRatio.html"><span class="page-nav-label">Next &rarr;</span><span class="page-nav-title">Common image ratios and their uses</span></a>
+      </nav>
+    </main>
+    <aside class="outline" aria-label="On this page">
+      <nav class="page-outline">
+        <p class="outline-title">On this page</p>
+        <ul class="outline-list outline-level-0">
+          <li class="outline-item"><a href="#canvas-and-image-size">1. Canvas and Image Size</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#change-canvas-size">Change Canvas Size</a></li>
+            <li class="outline-item"><a href="#resize-image">Resize Image</a></li>
+            <li class="outline-item"><a href="#rotate-flip-and-skew">Rotate, Flip and Skew</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#crop-select-and-move">2. Crop, Select and Move</a></li>
+          <li class="outline-item"><a href="#draw-and-annotate">3. Draw and Annotate</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#useful-tips">Useful Tips</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#color-operations">4. Color Operations</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#pick-a-color">Pick a Color</a></li>
+            <li class="outline-item"><a href="#fill-or-replace-a-background">Fill or Replace a Background</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#save-and-convert-image-formats">5. Save and Convert Image Formats</a></li>
+          <li class="outline-item"><a href="#practical-image-workflows">6. Practical Image Workflows</a>
+          <ul class="outline-list outline-level-1">
+            <li class="outline-item"><a href="#create-an-image-with-exact-dimensions">Create an Image with Exact Dimensions</a></li>
+            <li class="outline-item"><a href="#add-margins-around-an-existing-image">Add Margins Around an Existing Image</a></li>
+            <li class="outline-item"><a href="#extract-a-ui-element-from-a-screenshot">Extract a UI Element from a Screenshot</a></li>
+            <li class="outline-item"><a href="#create-a-simple-icon">Create a Simple Icon</a></li>
+            <li class="outline-item"><a href="#create-a-transparent-background-graphic">Create a Transparent Background Graphic</a></li>
+          </ul></li>
+          <li class="outline-item"><a href="#quick-operation-reference">7. Quick Operation Reference</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+  <footer class="site-footer">
+    <p class="site-footer-copyright">Copyright &copy; 2026 Alsk</p>
+    <p class="site-footer-note">Built from DocTool</p>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
+</html>
